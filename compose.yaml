@@ -22,7 +22,7 @@ services:
 
   blue:
     build: .
-    image: mmuskan24/clo835-webapp:v1
+    image: mmuskan24/clo835-webapp:v2
     ports: ["8081:8080"]
     environment: &app_env
       DBHOST: mysql-db
@@ -37,7 +37,7 @@ services:
         condition: service_healthy
 
   pink:
-    image: mmuskan24/clo835-webapp:v1
+    image: mmuskan24/clo835-webapp:v2
     ports: ["8082:8080"]
     environment:
       <<: *app_env
@@ -48,7 +48,7 @@ services:
         condition: service_healthy
 
   lime:
-    image: mmuskan24/clo835-webapp:v1
+    image: mmuskan24/clo835-webapp:v2
     ports: ["8083:8080"]
     environment:
       <<: *app_env
